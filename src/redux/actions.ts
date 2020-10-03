@@ -2,27 +2,33 @@ export enum ActionTypes {
   SET_ITEMS = 0,
   TIC = 1,
   INIT = 2,
-  RESET = 3
+  RESET = 3,
+  SET_ITERATIONS,
 }
 
 export const initGame = () => ({
   type: ActionTypes.INIT,
-  payload: {}
+  payload: {},
+});
+
+export const setIterations = () => ({
+  type: ActionTypes.SET_ITERATIONS,
+  payload: {},
 });
 
 export const resetScore = () => ({
   type: ActionTypes.RESET,
-  payload: {}
+  payload: {},
 });
 
-export const setItems = (items:GameBoardItem[][]) => ({
+export const setItems = (items: GameBoardItem[][]) => ({
   type: ActionTypes.SET_ITEMS,
   payload: {
-    items
-  }
+    items,
+  },
 });
 
 export const tic = () => ({
   type: ActionTypes.TIC,
-  payload: {}
+  payload: {},
 });
